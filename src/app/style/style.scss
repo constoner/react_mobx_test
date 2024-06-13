@@ -89,6 +89,7 @@ button,
 
 .container {
   max-width: variables.$box-container;
+  height: 100%;
   margin: 0 auto;
   padding: variables.$box-gutter-main;
 }

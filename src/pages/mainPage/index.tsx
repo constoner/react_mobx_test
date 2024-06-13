@@ -2,14 +2,13 @@ import React from 'react';
 import './style.scss';
 
 import Header from '../../widgets/header';
+import Main from '../../widgets/main';
 
 const MainPage = () => {
   return (
     <>
       <Header />
-      <main className="main">
-        <div className="container">qwertyui</div>
-      </main>
+      <Main />
     </>
   );
 };

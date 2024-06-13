@@ -1,0 +1,10 @@
+@use './../../app/style/variables.scss';
+
+.content-box {
+  width: 100%;
+  height: 100%;
+  background-color: variables.$color-bg-white;
+  border: 1px solid variables.$color-border;
+  border-radius: 12px;
+  overflow: hidden;
+}
