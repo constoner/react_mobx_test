@@ -1,0 +1,113 @@
+@use './../../shared/ui/styles/variables.scss';
+
+.table {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100%;
+}
+
+.table__scrolable {
+  position: relative;
+  border-bottom: 1px solid variables.$color-border;
+  overflow: auto;
+}
+
+.table__pagination {
+  margin-top: auto;
+  margin-left: auto;
+  padding: 16px;
+}
+
+.table__element {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__row:hover .table__item {
+  background-color: variables.$color-bg-dark;
+}
+
+.table__item {
+  padding: variables.$box-gutter-main 12px;
+  font-family: variables.$font-ff-main;
+  font-size: variables.$font-size-main;
+  line-height: 143%;
+  font-weight: 400;
+  color: variables.$color-txt-black;
+  text-align: left;
+  border-bottom: 1px solid variables.$color-border;
+
+  & img {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    margin-right: 12px;
+  }
+
+  &:first-child {
+    padding-left: 20px;
+    color: variables.$color-txt-add;
+  }
+
+  &:last-child {
+    position: relative;
+    padding-right: 52px;
+    color: variables.$color-txt-add;
+  }
+
+  &--header {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    padding: 8px 12px;
+    font-family: variables.$font-ff-main;
+    font-size: variables.$font-size-add;
+    font-weight: 500;
+    color: variables.$color-txt-secondary;
+    background-color: variables.$color-bg-table;
+    border: none;
+
+    &:first-child {
+      padding-left: 17px;
+    }
+
+    &:last-child {
+      position: sticky;
+      top: 0;
+    }
+  }
+}
+
+.table__button {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: variables.$color-icon-accent;
+  background-color: variables.$color-btn-accent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transform: translate(0%, -50%);
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+
+  &:disabled {
+    color: variables.$color-btn-disabled;
+    background-color: unset;
+    cursor: none;
+  }
+}
+
+.table__row:hover .table__button {
+  display: flex;
+}

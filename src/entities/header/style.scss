@@ -1,4 +1,8 @@
+@use './../../shared/ui/styles/variables.scss';
+
 .header {
+  padding: variables.$box-gutter-main 0;
+
   .header__container {
     display: flex;
     flex-wrap: wrap;
